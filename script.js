@@ -3,10 +3,9 @@
 // =========================================================
 
 
-// Tell CSS that JavaScript loaded successfully.
+// Confirm JavaScript loaded successfully.
 
 document.body.classList.add("js-enabled");
-
 
 
 // =========================================================
@@ -22,12 +21,9 @@ if (themeToggle) {
   const themeIcon =
     themeToggle.querySelector("i");
 
-
   const savedTheme =
     localStorage.getItem("theme");
 
-
-  // Load saved preference
 
   if (savedTheme === "dark") {
 
@@ -36,7 +32,6 @@ if (themeToggle) {
     if (themeIcon) {
 
       themeIcon.classList.remove("fa-moon");
-
       themeIcon.classList.add("fa-sun");
 
     }
@@ -44,14 +39,11 @@ if (themeToggle) {
   }
 
 
-  // Toggle theme
-
   themeToggle.addEventListener(
     "click",
     function () {
 
       document.body.classList.toggle("dark");
-
 
       const darkMode =
         document.body.classList.contains("dark");
@@ -62,7 +54,6 @@ if (themeToggle) {
         if (darkMode) {
 
           themeIcon.classList.remove("fa-moon");
-
           themeIcon.classList.add("fa-sun");
 
         }
@@ -70,7 +61,6 @@ if (themeToggle) {
         else {
 
           themeIcon.classList.remove("fa-sun");
-
           themeIcon.classList.add("fa-moon");
 
         }
@@ -89,7 +79,6 @@ if (themeToggle) {
 }
 
 
-
 // =========================================================
 // CHANGING HERO TEXT
 // =========================================================
@@ -103,13 +92,9 @@ if (changingText) {
   const words = [
 
     "software.",
-
     "web experiences.",
-
     "businesses.",
-
     "digital products.",
-
     "ideas."
 
   ];
@@ -151,11 +136,9 @@ if (changingText) {
 
     }, 300);
 
-
   }, 2500);
 
 }
-
 
 
 // =========================================================
@@ -165,8 +148,6 @@ if (changingText) {
 const revealElements =
   document.querySelectorAll(".reveal");
 
-
-// If IntersectionObserver is supported
 
 if ("IntersectionObserver" in window) {
 
@@ -183,7 +164,6 @@ if ("IntersectionObserver" in window) {
               "active"
             );
 
-
             observer.unobserve(
               entry.target
             );
@@ -195,12 +175,10 @@ if ("IntersectionObserver" in window) {
       },
 
       {
-
         threshold: 0.08,
 
         rootMargin:
           "0px 0px -40px 0px"
-
       }
 
     );
@@ -216,9 +194,6 @@ if ("IntersectionObserver" in window) {
 
 }
 
-
-// Browser fallback
-
 else {
 
   revealElements.forEach(
@@ -232,9 +207,8 @@ else {
 }
 
 
-
 // =========================================================
-// NAVBAR SHADOW
+// NAVBAR
 // =========================================================
 
 const navbar =
@@ -273,9 +247,8 @@ if (navbar) {
 }
 
 
-
 // =========================================================
-// SMOOTH INTERNAL NAVIGATION
+// SMOOTH INTERNAL LINKS
 // =========================================================
 
 const internalLinks =
@@ -347,9 +320,8 @@ internalLinks.forEach(
 );
 
 
-
 // =========================================================
-// ACTIVE NAVIGATION LINK
+// ACTIVE NAVIGATION
 // =========================================================
 
 const sections =

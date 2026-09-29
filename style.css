@@ -237,10 +237,10 @@ button {
   display: grid;
 
   grid-template-columns:
-    minmax(0, 1.25fr)
-    minmax(300px, 0.75fr);
+    minmax(0, 1.15fr)
+    minmax(330px, 0.85fr);
 
-  gap: 90px;
+  gap: 80px;
 
   align-items: center;
 }
@@ -345,7 +345,6 @@ button {
 
 .primary-btn {
   background: var(--accent);
-
   color: #ffffff;
 }
 
@@ -357,7 +356,6 @@ button {
 
 .secondary-btn {
   background: var(--surface);
-
   color: var(--text);
 
   border: 1px solid var(--border);
@@ -396,7 +394,9 @@ button {
 }
 
 
-/* ================= HERO GRAPHIC ================= */
+/* =========================================================
+   HERO PROFILE PHOTO
+========================================================= */
 
 .hero-image {
   display: flex;
@@ -405,63 +405,124 @@ button {
   align-items: center;
 }
 
-.image-placeholder {
-  width: min(100%, 380px);
+.profile-card {
+  position: relative;
 
-  aspect-ratio: 1 / 1;
+  width: min(100%, 400px);
 
-  padding: 30px;
+  aspect-ratio: 4 / 5;
 
-  border: 1px solid var(--border);
+  overflow: hidden;
 
   border-radius: 32px;
 
-  background:
-    radial-gradient(
-      circle at 25% 15%,
-      rgba(37, 99, 235, 0.20),
-      transparent 42%
-    ),
-    var(--surface);
+  border: 1px solid var(--border);
 
-  box-shadow: var(--shadow);
+  background: var(--surface);
 
-  display: flex;
-  flex-direction: column;
-
-  justify-content: center;
-  align-items: center;
-
-  text-align: center;
+  box-shadow:
+    0 30px 70px rgba(0, 0, 0, 0.16);
 
   transform: rotate(2deg);
 
   transition:
-    transform 0.35s ease,
-    box-shadow 0.35s ease;
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
 }
 
-.image-placeholder:hover {
-  transform:
-    rotate(0deg)
-    translateY(-7px);
+.profile-photo {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center center;
+
+  transition: transform 0.6s ease;
 }
 
-.image-placeholder i {
-  margin-bottom: 20px;
+.profile-overlay {
+  position: absolute;
 
-  color: var(--accent);
+  inset: 0;
 
-  font-size: 5rem;
+  z-index: 1;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 35%,
+      rgba(0, 0, 0, 0.08) 52%,
+      rgba(0, 0, 0, 0.82) 100%
+    );
 }
 
-.image-placeholder p {
+.profile-card-content {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  z-index: 2;
+
+  padding: 30px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.code-icon {
+  width: 54px;
+  height: 54px;
+
+  margin-bottom: 14px;
+
+  border-radius: 14px;
+
+  background: var(--accent);
+
+  color: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 1.5rem;
+
+  box-shadow:
+    0 10px 30px rgba(37, 99, 235, 0.4);
+}
+
+.profile-card-content p {
   margin: 0;
 
-  color: var(--muted);
+  color: #ffffff;
 
-  font-size: 0.85rem;
-  font-weight: 600;
+  font-size: 0.9rem;
+  font-weight: 700;
+
+  letter-spacing: 0.01em;
+}
+
+.profile-card:hover {
+  transform:
+    rotate(0deg)
+    translateY(-8px);
+
+  box-shadow:
+    0 35px 90px rgba(0, 0, 0, 0.22);
+}
+
+.profile-card:hover .profile-photo {
+  transform: scale(1.045);
 }
 
 
@@ -721,78 +782,47 @@ button {
 }
 
 
-/* ================= EXPERIENCE ================= */
+/* ================= EXPERIENCE TAGS ================= */
 
-.timeline {
-  position: relative;
+.experience-tags {
+  display: flex;
+  flex-wrap: wrap;
 
-  max-width: 850px;
+  gap: 8px;
 
-  margin-top: 40px;
+  margin-top: 18px;
 }
 
-.timeline::before {
-  content: "";
+.experience-tags span {
+  padding: 6px 11px;
 
-  position: absolute;
+  background: var(--surface);
 
-  top: 5px;
-  bottom: 0;
+  border: 1px solid var(--border);
 
-  left: 7px;
-
-  width: 1px;
-
-  background: var(--border);
-}
-
-.timeline-item {
-  position: relative;
-
-  padding-left: 50px;
-  padding-bottom: 55px;
-}
-
-.timeline-dot {
-  position: absolute;
-
-  top: 6px;
-  left: 0;
-
-  width: 15px;
-  height: 15px;
-
-  border-radius: 50%;
-
-  background: var(--accent);
-
-  box-shadow:
-    0 0 0 6px var(--bg);
-}
-
-.timeline-content h3 {
-  margin: 3px 0;
-
-  font-size: 1.4rem;
-}
-
-.position-subtitle {
-  margin-top: 0;
+  border-radius: 999px;
 
   color: var(--muted);
 
-  font-weight: 600;
+  font-size: 0.72rem;
+  font-weight: 700;
+
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
 }
 
-.timeline-content > p:last-child {
-  max-width: 720px;
+.experience-tags span:hover {
+  color: var(--accent);
 
-  color: var(--muted);
+  border-color: var(--accent);
+
+  transform: translateY(-2px);
 }
-
 
 /* =========================================================
-   ENTREPRENEURSHIP / BEYOND THE CODE
+   ENTREPRENEURSHIP
 ========================================================= */
 
 .beyond-section {
@@ -890,10 +920,9 @@ button {
 .bec-logo-container {
   position: relative;
 
-  min-height: 430px;
+  min-height: 400px;
 
   display: flex;
-
   flex-direction: column;
 
   align-items: center;
@@ -907,8 +936,8 @@ button {
 
   position: absolute;
 
-  width: 340px;
-  height: 340px;
+  width: 330px;
+  height: 330px;
 
   border-radius: 50%;
 
@@ -926,16 +955,11 @@ button {
   z-index: 1;
 
   width: 100%;
-  max-width: 390px;
+  max-width: 370px;
 
   height: auto;
 
   object-fit: contain;
-
-  /*
-    Logo has a black background, which blends into
-    the dark entrepreneurship section.
-  */
 
   mix-blend-mode: screen;
 
@@ -954,12 +978,6 @@ button {
   transform:
     scale(1.04)
     rotate(1deg);
-
-  filter:
-    brightness(1.15)
-    drop-shadow(
-      0 25px 50px rgba(0, 0, 0, 0.45)
-    );
 }
 
 .bec-logo-container p {
@@ -1042,22 +1060,30 @@ button {
 }
 
 
-/* ================= CONTACT ================= */
+/* =========================================================
+   CONTACT / SOCIAL MEDIA
+========================================================= */
 
 .contact-section {
   width: min(1180px, calc(100% - 48px));
 
   margin: 0 auto;
 
-  padding: 130px 0;
-
-  text-align: center;
+  padding: 120px 0;
 
   border-top: 1px solid var(--border);
 }
 
-.contact-section h2 {
-  margin: 10px auto 25px;
+
+.contact-section > .section-label {
+  text-align: center;
+}
+
+
+.contact-section > h2 {
+  margin: 10px auto 20px;
+
+  text-align: center;
 
   font-size: clamp(3rem, 7vw, 6rem);
 
@@ -1066,14 +1092,248 @@ button {
   letter-spacing: -0.065em;
 }
 
-.contact-section > p:not(.section-label) {
-  max-width: 620px;
 
-  margin: 0 auto 35px;
+.contact-intro {
+  max-width: 650px;
+
+  margin: 0 auto 55px;
+
+  color: var(--muted);
+
+  text-align: center;
+
+  font-size: 1.05rem;
+}
+
+
+/* ================= SOCIAL GRID ================= */
+
+.social-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 16px;
+
+  max-width: 950px;
+
+  margin: 0 auto;
+}
+
+
+/* Individual card */
+
+.social-card {
+  position: relative;
+
+  min-height: 105px;
+
+  padding: 22px;
+
+  overflow: hidden;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  background: var(--surface);
+
+  border: 1px solid var(--border);
+
+  border-radius: 18px;
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+
+.social-card:hover {
+  transform: translateY(-5px);
+
+  border-color: var(--accent);
+
+  box-shadow: var(--shadow);
+}
+
+
+/* ================= ICON ================= */
+
+.social-icon {
+  width: 54px;
+  height: 54px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  background: var(--surface-2);
+
+  color: var(--text);
+
+  font-size: 1.45rem;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+
+.social-card:hover .social-icon {
+  transform: scale(1.08);
+}
+
+
+/* YouTube */
+
+.youtube-icon {
+  color: #ff0000;
+}
+
+
+/* Instagram */
+
+.instagram-icon {
+  color: #e1306c;
+}
+
+
+/* TikTok */
+
+.tiktok-icon {
+  color: var(--text);
+}
+
+
+/* Email */
+
+.email-icon {
+  color: var(--accent);
+}
+
+
+/* ================= SOCIAL INFORMATION ================= */
+
+.social-info {
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  flex: 1;
+}
+
+
+.social-name {
+  color: var(--text);
+
+  font-size: 1.05rem;
+
+  font-weight: 750;
+}
+
+
+.social-handle {
+  margin-top: 2px;
+
+  overflow: hidden;
+
+  color: var(--muted);
+
+  font-size: 0.85rem;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+
+/* Arrow */
+
+.social-arrow {
+  flex-shrink: 0;
+
+  color: var(--muted);
+
+  font-size: 0.85rem;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.social-card:hover .social-arrow {
+  color: var(--accent);
+
+  transform: translate(3px, -3px);
+}
+
+
+/* ================= CTA ================= */
+
+.contact-cta {
+  margin-top: 55px;
+
+  text-align: center;
+}
+
+
+.contact-cta p {
+  margin-bottom: 18px;
 
   color: var(--muted);
 }
 
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 700px) {
+
+  .contact-section {
+    width: min(100% - 36px, 1180px);
+
+    padding: 90px 0;
+  }
+
+
+  .social-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .social-card {
+    min-height: 90px;
+
+    padding: 18px;
+  }
+
+
+  .social-icon {
+    width: 48px;
+    height: 48px;
+
+    font-size: 1.25rem;
+  }
+
+
+  .contact-cta .btn {
+    width: 100%;
+  }
+
+}
 
 /* ================= FOOTER ================= */
 
@@ -1138,7 +1398,7 @@ footer {
 }
 
 
-/* ================= REVEAL ================= */
+/* ================= SCROLL REVEAL ================= */
 
 .reveal {
   opacity: 1;
@@ -1195,8 +1455,8 @@ footer {
     justify-content: flex-start;
   }
 
-  .image-placeholder {
-    max-width: 350px;
+  .profile-card {
+    max-width: 370px;
   }
 
   .about-grid {
@@ -1220,9 +1480,6 @@ footer {
   .section-heading > p {
     margin-top: 15px;
   }
-
-
-  /* Entrepreneurship */
 
   .beyond-content {
     grid-template-columns: 1fr;
@@ -1294,10 +1551,27 @@ footer {
     width: 100%;
   }
 
-  .image-placeholder {
+  .hero-image {
+    justify-content: center;
+  }
+
+  .profile-card {
     width: 100%;
 
-    max-width: 320px;
+    max-width: 340px;
+
+    border-radius: 25px;
+  }
+
+  .profile-card-content {
+    padding: 24px;
+  }
+
+  .code-icon {
+    width: 48px;
+    height: 48px;
+
+    font-size: 1.3rem;
   }
 
   .section {
@@ -1316,9 +1590,6 @@ footer {
   .project-info {
     padding: 22px;
   }
-
-
-  /* Entrepreneurship */
 
   .beyond-section {
     padding: 85px 18px;
@@ -1345,7 +1616,6 @@ footer {
   .bec-logo {
     max-width: 260px;
   }
-
 
   .writing-card {
     align-items: flex-start;

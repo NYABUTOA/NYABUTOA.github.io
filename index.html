@@ -14,6 +14,7 @@
 
   <link rel="stylesheet" href="style.css">
 
+  <!-- Font Awesome -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -22,376 +23,451 @@
 
 <body>
 
-<!-- ================= NAVIGATION ================= -->
+  <!-- ================= NAVIGATION ================= -->
 
-<nav class="navbar">
-  <div class="nav-container">
+  <nav class="navbar">
 
-    <a href="#home" class="logo">
-      ALPHA<span>.</span>
-    </a>
+    <div class="nav-container">
 
-    <div class="nav-links">
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
-      <a href="#writing">Writing</a>
-      <a href="#contact">Contact</a>
+      <a href="#home" class="logo">
+        ALPHA<span>.</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#writing">Writing</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <button
+        id="theme-toggle"
+        aria-label="Toggle dark mode"
+      >
+        <i class="fa-solid fa-moon"></i>
+      </button>
+
     </div>
 
-    <button id="theme-toggle" aria-label="Toggle dark mode">
-      <i class="fa-solid fa-moon"></i>
-    </button>
-
-  </div>
-</nav>
+  </nav>
 
 
-<!-- ================= HERO ================= -->
+  <!-- ================= HERO ================= -->
 
-<header class="hero" id="home">
+  <header class="hero" id="home">
 
-  <div class="hero-content">
+    <div class="hero-content">
 
-    <div class="hero-text">
+      <!-- LEFT -->
 
-      <p class="eyebrow">HELLO, I'M</p>
+      <div class="hero-text">
 
-      <h1>
-        Arphaxad
-        <span>(Alpha)</span>
-        Nyabuto.
-      </h1>
+        <p class="eyebrow">
+          HELLO, I'M
+        </p>
 
-      <h2>
-        I build
-        <span id="changing-text">software.</span>
+        <h1>
+          Arphaxad
+          <span>(Alpha)</span>
+          Nyabuto.
+        </h1>
+
+        <h2>
+          I build
+          <span id="changing-text">
+            software.
+          </span>
+        </h2>
+
+        <p class="hero-description">
+          Computer Science student at Berea College interested in
+          software development, entrepreneurship, digital media,
+          and turning ideas into real products.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a
+            href="#projects"
+            class="btn primary-btn"
+          >
+            View My Work
+            <i class="fa-solid fa-arrow-down"></i>
+          </a>
+
+          <a
+            href="#contact"
+            class="btn secondary-btn"
+          >
+            Contact Me
+          </a>
+
+        </div>
+
+
+        <div class="hero-socials">
+
+          <a
+            href="https://github.com/nyabutoa"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+          >
+            <i class="fa-brands fa-github"></i>
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/arphaxad-nyabuto-2800401a0/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+
+          <a
+            href="mailto:naybutoarpha768@gmail.com"
+            aria-label="Email"
+          >
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- RIGHT / PROFILE -->
+
+      <div class="hero-image">
+
+        <div class="profile-card">
+
+          <img
+            src="profile.jpg"
+            alt="Portrait of Alpha Nyabuto"
+            class="profile-photo"
+          >
+
+          <div class="profile-overlay"></div>
+
+          <div class="profile-card-content">
+
+            <div class="code-icon">
+              <i class="fa-solid fa-code"></i>
+            </div>
+
+            <p>
+              Developer • Entrepreneur • Creator
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+    <!-- ================= ABOUT ================= -->
+
+    <section
+      id="about"
+      class="section reveal"
+    >
+
+      <p class="section-label">
+        ABOUT ME
+      </p>
+
+      <div class="about-grid">
+
+        <h2>
+          Building things that
+          <span>
+            solve real problems.
+          </span>
+        </h2>
+
+
+        <div class="about-content">
+
+          <p>
+            I'm a Computer Science student at Berea College pursuing
+            a B.A. in Computer Science with a minor in Digital Media,
+            expected May 2027.
+          </p>
+
+          <p>
+            I completed a software development internship with the
+            Berea Software Development Team (SSDT), where I helped
+            build and maintain internal web applications used by
+            students and faculty.
+          </p>
+
+          <p>
+            Outside of software development, I serve as Vice President
+            of the Berea College Entrepreneurship Club, where I help
+            students develop ideas, products, and pitches.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= SKILLS ================= -->
+
+    <section class="section skills-section reveal">
+
+      <p class="section-label">
+        TECH STACK
+      </p>
+
+      <h2 class="section-title">
+        Tools I work with.
       </h2>
 
-      <p class="hero-description">
-        Computer Science student at Berea College interested in
-        software development, entrepreneurship, digital media,
-        and turning ideas into real products.
-      </p>
+      <div class="skill-container">
 
-      <div class="hero-buttons">
+        <span>
+          <i class="fa-brands fa-python"></i>
+          Python
+        </span>
 
-        <a href="#projects" class="btn primary-btn">
-          View My Work
-          <i class="fa-solid fa-arrow-down"></i>
-        </a>
+        <span>
+          <i class="fa-brands fa-js"></i>
+          JavaScript
+        </span>
 
-        <a href="#contact" class="btn secondary-btn">
-          Contact Me
-        </a>
+        <span>
+          <i class="fa-brands fa-java"></i>
+          Java
+        </span>
 
-      </div>
+        <span>C++</span>
+        <span>Flask</span>
+        <span>SQL</span>
+        <span>Peewee</span>
 
-      <div class="hero-socials">
+        <span>
+          <i class="fa-brands fa-html5"></i>
+          HTML5
+        </span>
 
-        <a
-          href="https://github.com/nyabutoa"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="GitHub"
-        >
+        <span>
+          <i class="fa-brands fa-css3-alt"></i>
+          CSS3
+        </span>
+
+        <span>
+          <i class="fa-brands fa-bootstrap"></i>
+          Bootstrap
+        </span>
+
+        <span>
+          <i class="fa-brands fa-git-alt"></i>
+          Git
+        </span>
+
+        <span>
           <i class="fa-brands fa-github"></i>
-        </a>
-
-        <a
-          href="https://www.linkedin.com/in/arphaxad-nyabuto-2800401a0/"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="LinkedIn"
-        >
-          <i class="fa-brands fa-linkedin"></i>
-        </a>
-
-        <a
-          href="mailto:naybutoarpha768@gmail.com"
-          aria-label="Email"
-        >
-          <i class="fa-solid fa-envelope"></i>
-        </a>
-
-      </div>
-
-    </div>
-
-
-    <div class="hero-image">
-
-      <div class="image-placeholder">
-
-        <i class="fa-solid fa-code"></i>
-
-        <p>
-          Developer • Entrepreneur • Creator
-        </p>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</header>
-
-
-<main>
-
-<!-- ================= ABOUT ================= -->
-
-<section id="about" class="section reveal">
-
-  <p class="section-label">
-    ABOUT ME
-  </p>
-
-  <div class="about-grid">
-
-    <h2>
-      Building things that
-      <span>solve real problems.</span>
-    </h2>
-
-    <div class="about-content">
-
-      <p>
-        I'm a Computer Science student at Berea College pursuing
-        a B.A. in Computer Science with a minor in Digital Media,
-        expected May 2027.
-      </p>
-
-      <p>
-        I completed a software development internship with the
-        Berea Software Development Team (SSDT), where I helped
-        build and maintain internal web applications used by
-        students and faculty.
-      </p>
-
-      <p>
-        Outside of software development, I serve as Vice President
-        of the Berea College Entrepreneurship Club, where I help
-        students develop ideas, products, and pitches.
-      </p>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- ================= SKILLS ================= -->
-
-<section class="section skills-section reveal">
-
-  <p class="section-label">
-    TECH STACK
-  </p>
-
-  <h2 class="section-title">
-    Tools I work with.
-  </h2>
-
-  <div class="skill-container">
-
-    <span><i class="fa-brands fa-python"></i> Python</span>
-
-    <span><i class="fa-brands fa-js"></i> JavaScript</span>
-
-    <span><i class="fa-brands fa-java"></i> Java</span>
-
-    <span>C++</span>
-
-    <span>Flask</span>
-
-    <span>SQL</span>
-
-    <span>Peewee</span>
-
-    <span><i class="fa-brands fa-html5"></i> HTML5</span>
-
-    <span><i class="fa-brands fa-css3-alt"></i> CSS3</span>
-
-    <span><i class="fa-brands fa-bootstrap"></i> Bootstrap</span>
-
-    <span><i class="fa-brands fa-git-alt"></i> Git</span>
-
-    <span><i class="fa-brands fa-github"></i> GitHub</span>
-
-    <span><i class="fa-brands fa-docker"></i> Docker</span>
-
-    <span><i class="fa-brands fa-linux"></i> Linux</span>
-
-    <span>Adobe Photoshop</span>
-
-  </div>
-
-</section>
-
-
-<!-- ================= PROJECTS ================= -->
-
-<section id="projects" class="section reveal">
-
-  <p class="section-label">
-    FEATURED WORK
-  </p>
-
-  <div class="section-heading">
-
-    <h2 class="section-title">
-      Things I've built.
-    </h2>
-
-    <p>
-      A selection of projects I've developed
-      for businesses, clients, and coursework.
-    </p>
-
-  </div>
-
-
-  <div class="project-grid">
-
-    <!-- PROJECT 1 -->
-
-    <article class="project-card">
-
-      <div class="project-image">
-
-        <span class="project-number">
-          01
+          GitHub
         </span>
 
-        <i class="fa-solid fa-hand-holding-heart"></i>
-
-      </div>
-
-      <div class="project-info">
-
-        <p class="project-type">
-          FULL-STACK WEB APPLICATION
-        </p>
-
-        <h3>
-          Uplifted Care Services
-        </h3>
-
-        <p>
-          Full-stack website for a home care services provider
-          with a Flask backend and SQL database. The site uses
-          semantic HTML and streamlined navigation to improve
-          accessibility for clients and caregivers.
-        </p>
-
-        <div class="project-tags">
-          <span>Flask</span>
-          <span>SQL</span>
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JavaScript</span>
-        </div>
-
-      </div>
-
-    </article>
-
-
-    <!-- PROJECT 2 -->
-
-    <article class="project-card">
-
-      <div class="project-image">
-
-        <span class="project-number">
-          02
+        <span>
+          <i class="fa-brands fa-docker"></i>
+          Docker
         </span>
 
-        <i class="fa-solid fa-truck"></i>
-
-      </div>
-
-      <div class="project-info">
-
-        <p class="project-type">
-          FULL-STACK WEB APPLICATION
-        </p>
-
-        <h3>
-          Hamad Towing & Transportation
-        </h3>
-
-        <p>
-          Full-stack website for a towing and transportation
-          company. The Flask and SQL application powers
-          customer service requests, receipt sharing,
-          and streamlined communication.
-        </p>
-
-        <div class="project-tags">
-          <span>Flask</span>
-          <span>SQL</span>
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JavaScript</span>
-        </div>
-
-      </div>
-
-    </article>
-
-
-    <!-- PROJECT 3 -->
-
-    <article class="project-card">
-
-      <div class="project-image">
-
-        <span class="project-number">
-          03
+        <span>
+          <i class="fa-brands fa-linux"></i>
+          Linux
         </span>
 
-        <i class="fa-solid fa-music"></i>
+        <span>
+          Adobe Photoshop
+        </span>
 
       </div>
 
-      <div class="project-info">
+    </section>
 
-        <p class="project-type">
-          PYTHON WEB APPLICATION
-        </p>
 
-        <h3>
-          Playlist Manager
-        </h3>
+    <!-- ================= PROJECTS ================= -->
+
+    <section
+      id="projects"
+      class="section reveal"
+    >
+
+      <p class="section-label">
+        FEATURED WORK
+      </p>
+
+      <div class="section-heading">
+
+        <h2 class="section-title">
+          Things I've built.
+        </h2>
 
         <p>
-          Flask web application for organizing and managing
-          music playlists. Features include searching,
-          sorting by genre, artist, or mood, adding songs,
-          removing songs, and playlist shuffling.
+          A selection of projects I've developed for businesses,
+          clients, and coursework.
         </p>
-
-        <div class="project-tags">
-          <span>Python</span>
-          <span>Flask</span>
-        </div>
 
       </div>
 
-    </article>
 
-  </div>
+      <div class="project-grid">
 
-</section>
+        <!-- PROJECT 1 -->
+
+        <article class="project-card">
+
+          <div class="project-image">
+
+            <span class="project-number">
+              01
+            </span>
+
+            <i class="fa-solid fa-hand-holding-heart"></i>
+
+          </div>
+
+          <div class="project-info">
+
+            <p class="project-type">
+              FULL-STACK WEB APPLICATION
+            </p>
+
+            <h3>
+              Uplifted Care Services
+            </h3>
+
+            <p>
+              Full-stack website for a home care services provider
+              with a Flask backend and SQL database. The site uses
+              semantic HTML and streamlined navigation to improve
+              accessibility for clients and caregivers.
+            </p>
+
+            <div class="project-tags">
+              <span>Flask</span>
+              <span>SQL</span>
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+
+          </div>
+
+        </article>
 
 
-<!-- ================= EXPERIENCE ================= -->
+        <!-- PROJECT 2 -->
 
-<section id="experience" class="section reveal">
+        <article class="project-card">
+
+          <div class="project-image">
+
+            <span class="project-number">
+              02
+            </span>
+
+            <i class="fa-solid fa-truck"></i>
+
+          </div>
+
+          <div class="project-info">
+
+            <p class="project-type">
+              FULL-STACK WEB APPLICATION
+            </p>
+
+            <h3>
+              Hamad Towing & Transportation
+            </h3>
+
+            <p>
+              Full-stack website for a towing and transportation
+              company. The Flask and SQL application powers customer
+              service requests, receipt sharing, and streamlined
+              communication.
+            </p>
+
+            <div class="project-tags">
+              <span>Flask</span>
+              <span>SQL</span>
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- PROJECT 3 -->
+
+        <article class="project-card">
+
+          <div class="project-image">
+
+            <span class="project-number">
+              03
+            </span>
+
+            <i class="fa-solid fa-music"></i>
+
+          </div>
+
+          <div class="project-info">
+
+            <p class="project-type">
+              PYTHON WEB APPLICATION
+            </p>
+
+            <h3>
+              Playlist Manager
+            </h3>
+
+            <p>
+              Flask web application for organizing and managing
+              music playlists. Features include searching, sorting
+              by genre, artist, or mood, adding songs, removing songs,
+              and playlist shuffling.
+            </p>
+
+            <div class="project-tags">
+              <span>Python</span>
+              <span>Flask</span>
+            </div>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+   <!-- ================= EXPERIENCE ================= -->
+
+<section
+  id="experience"
+  class="section reveal"
+>
 
   <p class="section-label">
     EXPERIENCE
@@ -402,6 +478,52 @@
   </h2>
 
   <div class="timeline">
+
+    <!-- BEREA COLLEGE IT -->
+
+    <div class="timeline-item">
+
+      <div class="timeline-dot"></div>
+
+      <div class="timeline-content">
+
+        <p class="company">
+          BEREA COLLEGE
+        </p>
+
+        <h3>
+          Information Technology Support
+        </h3>
+
+        <p class="position-subtitle">
+          Dell Certified • Tier 1, Tier 2 & Tier 3 Support
+        </p>
+
+        <p>
+          Provided technical support across Tier 1, Tier 2, and Tier 3
+          environments at Berea College. Troubleshot hardware, software,
+          operating system, and user account issues while supporting
+          students, faculty, and staff. Dell certified with hands-on
+          experience diagnosing, repairing, and resolving computer
+          hardware and technical issues.
+        </p>
+
+        <div class="experience-tags">
+          <span>Dell Certified</span>
+          <span>Tier 1</span>
+          <span>Tier 2</span>
+          <span>Tier 3</span>
+          <span>Hardware</span>
+          <span>Troubleshooting</span>
+          <span>Technical Support</span>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- SOFTWARE DEVELOPMENT -->
 
     <div class="timeline-item">
 
@@ -422,16 +544,27 @@
         </p>
 
         <p>
-          Built and maintained CELTS and LSF, internal web
-          applications used by Berea College students and faculty.
-          Worked with Flask routes, Jinja templates, Peewee queries,
-          SQL, Docker, and Linux.
+          Built and maintained CELTS and LSF, internal web applications
+          used by Berea College students and faculty. Worked with Flask
+          routes, Jinja templates, Peewee queries, SQL, Docker, and Linux
+          to develop and maintain production applications.
         </p>
+
+        <div class="experience-tags">
+          <span>Python</span>
+          <span>Flask</span>
+          <span>Peewee</span>
+          <span>SQL</span>
+          <span>Docker</span>
+          <span>Linux</span>
+        </div>
 
       </div>
 
     </div>
 
+
+    <!-- JOSEANN -->
 
     <div class="timeline-item">
 
@@ -447,14 +580,27 @@
           Project Coordinator
         </h3>
 
-        <p>
-          Managed a development team building a responsive
-          e-commerce website for a cosmetics brand operating
-          between Minnesota and Kenya. Translated business
-          requirements into technical specifications for the
-          development team.
+        <p class="position-subtitle">
+          Web Development Project
         </p>
 
+        <p>
+          Managed a development team building a responsive e-commerce
+          website for a cosmetics brand operating between Minnesota and
+          Kenya. Translated business requirements into technical
+          specifications and coordinated development work between the
+          client and technical team.
+        </p>
+
+        <div class="experience-tags">
+          <span>Project Management</span>
+          <span>Web Development</span>
+          <span>Team Leadership</span>
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+        </div>
+
       </div>
 
     </div>
@@ -463,116 +609,121 @@
 
 </section>
 
+    <!-- ================= ENTREPRENEURSHIP ================= -->
 
-<!-- ================= ENTREPRENEURSHIP ================= -->
+    <section class="beyond-section reveal">
 
-<section class="beyond-section reveal">
+      <div class="beyond-content">
 
-  <div class="beyond-content">
+        <!-- LEFT -->
 
-    <!-- LEFT -->
+        <div class="beyond-text">
 
-    <div class="beyond-text">
+          <p class="section-label">
+            BEYOND THE CODE
+          </p>
+
+          <h2>
+            Ideas are only the beginning.
+          </h2>
+
+          <p class="beyond-description">
+            As Vice President of the Berea College Entrepreneurship
+            Club, I help students turn ideas into businesses through
+            mentorship, pitch development, competitions, and funding
+            opportunities.
+          </p>
+
+
+          <div class="beyond-features">
+
+            <div>
+              <i class="fa-solid fa-people-group"></i>
+              <span>Real Mentorship</span>
+            </div>
+
+            <div>
+              <i class="fa-solid fa-microphone"></i>
+              <span>Live Pitch Competitions</span>
+            </div>
+
+            <div>
+              <i class="fa-solid fa-sack-dollar"></i>
+              <span>Funding Opportunities</span>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- RIGHT / BEC -->
+
+        <div class="bec-logo-container">
+
+          <img
+            src="1.png"
+            alt="Berea Entrepreneurship Club BEC logo"
+            class="bec-logo"
+          >
+
+          <p>
+            Berea Entrepreneurship Club
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= WRITING ================= -->
+
+    <section
+      id="writing"
+      class="section reveal"
+    >
 
       <p class="section-label">
-        BEYOND THE CODE
+        WRITING
       </p>
 
-      <h2>
-        Ideas are only the beginning.
+      <h2 class="section-title">
+        Things I've written.
       </h2>
 
-      <p class="beyond-description">
-        As Vice President of the Berea College Entrepreneurship Club,
-        I help students turn ideas into businesses through mentorship,
-        pitch development, competitions, and funding opportunities.
-      </p>
 
-      <div class="beyond-features">
-
-        <div>
-          <i class="fa-solid fa-people-group"></i>
-          <span>Real Mentorship</span>
-        </div>
-
-        <div>
-          <i class="fa-solid fa-microphone"></i>
-          <span>Live Pitch Competitions</span>
-        </div>
-
-        <div>
-          <i class="fa-solid fa-sack-dollar"></i>
-          <span>Funding Opportunities</span>
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <!-- RIGHT: BEC LOGO -->
-
-    <div class="bec-logo-container">
-
-      <img
-        src="1.png"
-        alt="Berea Entrepreneurship Club BEC logo"
-        class="bec-logo"
+      <a
+        href="internship-paper.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="writing-card"
       >
 
-      <p>
-        Berea Entrepreneurship Club
-      </p>
+        <div>
 
-    </div>
+          <p>
+            UX DESIGN • HUMAN-COMPUTER INTERACTION
+          </p>
 
-  </div>
+          <h3>
+            Which Comes First? Form or Function
+          </h3>
 
-</section>
+          <span>
+            A literature review examining the form-vs-function
+            debate in UX design and Human-Computer Interaction,
+            written for my CSC 395/495 internship.
+          </span>
 
+        </div>
 
-<!-- ================= WRITING ================= -->
+        <i class="fa-solid fa-arrow-up-right-from-square"></i>
 
-<section id="writing" class="section reveal">
+      </a>
 
-  <p class="section-label">
-    WRITING
-  </p>
-
-  <h2 class="section-title">
-    Things I've written.
-  </h2>
-
-  <a
-    href="internship-paper.pdf"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="writing-card"
-  >
-
-    <div>
-
-      <p>
-        UX DESIGN • HUMAN-COMPUTER INTERACTION
-      </p>
-
-      <h3>
-        Which Comes First? Form or Function
-      </h3>
-
-      <span>
-        A literature review examining the form-vs-function
-        debate in UX design and Human-Computer Interaction,
-        written for my CSC 395/495 internship.
-      </span>
-
-    </div>
-
-    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
-  </a>
-
-</section>
+    </section>
 
 
 <!-- ================= CONTACT ================= -->
@@ -584,92 +735,242 @@
   </p>
 
   <h2>
-    Have an idea?
-    <br>
-    Let's build something.
+    Find me online.
   </h2>
 
-  <p>
-    I'm always interested in new projects, collaborations,
-    entrepreneurship, and software development opportunities.
+  <p class="contact-intro">
+    Whether it's software, entrepreneurship, photography,
+    digital media, or creative work, feel free to connect
+    with me across my platforms.
   </p>
 
-  <a
-    href="mailto:naybutoarpha768@gmail.com"
-    class="btn primary-btn"
-  >
-    Get In Touch
-    <i class="fa-solid fa-arrow-right"></i>
-  </a>
 
-</section>
+  <div class="social-grid">
 
-</main>
+    <!-- GITHUB -->
 
+    <a
+      href="https://github.com/nyabutoa"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="social-card"
+    >
 
-<!-- ================= FOOTER ================= -->
+      <div class="social-icon">
+        <i class="fa-brands fa-github"></i>
+      </div>
 
-<footer>
+      <div class="social-info">
+        <span class="social-name">GitHub</span>
+        <span class="social-handle">@nyabutoa</span>
+      </div>
 
-  <div class="footer-content">
+      <i class="fa-solid fa-arrow-up-right-from-square social-arrow"></i>
 
-    <div>
-
-      <a href="#home" class="logo">
-        ALPHA<span>.</span>
-      </a>
-
-      <p>
-        Developer • Entrepreneur • Creator
-      </p>
-
-    </div>
+    </a>
 
 
-    <div class="footer-links">
+    <!-- LINKEDIN -->
 
-      <a
-        href="https://github.com/nyabutoa"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GitHub
-      </a>
+    <a
+      href="https://www.linkedin.com/in/arphaxad-nyabuto-2800401a0/"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="social-card"
+    >
 
-      <a
-        href="https://www.linkedin.com/in/arphaxad-nyabuto-2800401a0/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        LinkedIn
-      </a>
+      <div class="social-icon">
+        <i class="fa-brands fa-linkedin-in"></i>
+      </div>
 
-      <a href="mailto:naybutoarpha768@gmail.com">
-        Email
-      </a>
+      <div class="social-info">
+        <span class="social-name">LinkedIn</span>
+        <span class="social-handle">Arphaxad Nyabuto</span>
+      </div>
 
-    </div>
+      <i class="fa-solid fa-arrow-up-right-from-square social-arrow"></i>
 
-  </div>
+    </a>
 
 
-  <div class="footer-bottom">
+    <!-- YOUTUBE -->
 
-    <p>
-      &copy; 2026 Alpha Nyabuto.
-      All rights reserved.
-    </p>
+    <a
+      href="#"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="social-card"
+    >
 
-    <a href="#home">
-      Back to top ↑
+      <div class="social-icon youtube-icon">
+        <i class="fa-brands fa-youtube"></i>
+      </div>
+
+      <div class="social-info">
+        <span class="social-name">YouTube</span>
+        <span class="social-handle">@arphaxad nyabuto</span>
+      </div>
+
+      <i class="fa-solid fa-arrow-up-right-from-square social-arrow"></i>
+
+    </a>
+
+
+    <!-- INSTAGRAM -->
+
+    <a
+      href="#"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="social-card"
+    >
+
+      <div class="social-icon instagram-icon">
+        <i class="fa-brands fa-instagram"></i>
+      </div>
+
+      <div class="social-info">
+        <span class="social-name">Instagram</span>
+        <span class="social-handle">@alphaflixinky</span>
+      </div>
+
+      <i class="fa-solid fa-arrow-up-right-from-square social-arrow"></i>
+
+    </a>
+
+
+    <!-- TIKTOK -->
+
+    <a
+      href="#"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="social-card"
+    >
+
+      <div class="social-icon tiktok-icon">
+        <i class="fa-brands fa-tiktok"></i>
+      </div>
+
+      <div class="social-info">
+        <span class="social-name">TikTok</span>
+        <span class="social-handle">@chkidesign</span>
+      </div>
+
+      <i class="fa-solid fa-arrow-up-right-from-square social-arrow"></i>
+
+    </a>
+
+
+    <!-- EMAIL -->
+
+    <a
+      href="mailto:naybutoarpha768@gmail.com"
+      class="social-card"
+    >
+
+      <div class="social-icon email-icon">
+        <i class="fa-solid fa-envelope"></i>
+      </div>
+
+      <div class="social-info">
+        <span class="social-name">Email</span>
+        <span class="social-handle">Let's work together</span>
+      </div>
+
+      <i class="fa-solid fa-arrow-right social-arrow"></i>
+
     </a>
 
   </div>
 
-</footer>
+
+  <div class="contact-cta">
+
+    <p>
+      Have a project, opportunity, or collaboration in mind?
+    </p>
+
+    <a
+      href="mailto:naybutoarpha768@gmail.com"
+      class="btn primary-btn"
+    >
+      Send Me an Email
+      <i class="fa-solid fa-paper-plane"></i>
+    </a>
+
+  </div>
+
+</section>
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer>
+
+    <div class="footer-content">
+
+      <div>
+
+        <a
+          href="#home"
+          class="logo"
+        >
+          ALPHA<span>.</span>
+        </a>
+
+        <p>
+          Developer • Entrepreneur • Creator
+        </p>
+
+      </div>
 
 
-<script src="script.js"></script>
+      <div class="footer-links">
+
+        <a
+          href="https://github.com/nyabutoa"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/arphaxad-nyabuto-2800401a0/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn
+        </a>
+
+        <a
+          href="mailto:naybutoarpha768@gmail.com"
+        >
+          Email
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <p>
+        &copy; 2026 Alpha Nyabuto.
+        All rights reserved.
+      </p>
+
+      <a href="#home">
+        Back to top ↑
+      </a>
+
+    </div>
+
+  </footer>
+
+
+  <script src="script.js"></script>
 
 </body>
 

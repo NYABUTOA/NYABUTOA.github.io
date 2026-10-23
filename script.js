@@ -338,6 +338,13 @@ const navLinks =
 
 function updateActiveNavigation() {
 
+  if (!sections.length) {
+
+    return;
+
+  }
+
+
   let currentSection = "";
 
 
